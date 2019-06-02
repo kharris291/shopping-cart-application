@@ -38,9 +38,9 @@ class App extends Component {
     await axios.get('http://localhost:8080/api/items')
     .then((data) => {
       this.setState({ items: data.data, loading: false })
-      console.log(this.state)
+      
     })
-    console.log(this.state)
+    
   }
 
 
@@ -133,12 +133,7 @@ removeItemParent(attrs){
   var totalValue = parseFloat(this.state.runningTotal) - attrs.productPrice
   this.setState({
     items: this.state.items.map((item) => {
-      console.log(item)
-      console.log(item.id ===  attrs.id || (item.id === undefined && item.name === attrs.name ))
-
       if (item.id ===  attrs.id || (item.id === undefined && item.name === attrs.name )) {
-        console.log(item)
-        console.log(attrs.id)
         return {
           id: attrs.id,
           name: item.name,
@@ -186,7 +181,6 @@ inputPromoCode(attrs){
 
         this.setState({
           promotionApplied:this.state.promotionApplied.map((item) => {
-            console.log(item.applyMe)
             if (item.name ===  promoCodeInput && item.applyMe === false ) {
               currentPromoCodeUsed = true
               return {
@@ -246,7 +240,7 @@ inputPromoCode(attrs){
           ]
           );
       }else{
-        return(<div>loading</div>)
+        return(<Segment loading />)
       }
     }
   }

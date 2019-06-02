@@ -36,12 +36,6 @@
 
 
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
 
 .column {
   flex-direction: column;
@@ -54,23 +48,6 @@
   flex-basis: 100%;
   flex: 1;
   margin-right: 3;
-}
-
-.itemName{
-  width: 40%;
-  display: inline-block;
-}
-
-.itemContent{
-  width: 60%; 
-  display: inline-block;
-}
-
-
-.itemDetails{
-  display: inline-block;
-    width: 25%;
-    min-width: 25%;
 }
 
 
@@ -90,4 +67,8 @@
 
 .paddingBetweenContainers{
   display: table;
+}
+
+button.ui.button {
+    padding: 5px;
 }

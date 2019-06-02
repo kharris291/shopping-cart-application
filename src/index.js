@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index';
 import App from './components/js/App';
 
-// import 'semantic-ui-css/semantic.css'
+import 'semantic-ui-css/semantic.css'
 
 import * as serviceWorker from './serviceWorker';
 

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 import ItemDetails from './ItemDetails.js'
-import {  Grid, Row, Col } from 'react-flexbox-grid';
+import {  Grid } from 'semantic-ui-react'
+import {  Row, Col } from 'react-flexbox-grid';
 
 class AvailableItems extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.handleUpdate = this.handleUpdate.bind(this);
   }
 
@@ -21,11 +21,12 @@ class AvailableItems extends Component {
     ));
 
     return (
-      <Grid fluid>
+      <Grid textAlign="center" verticalAlign="middle" centered columns={1}>
         <Row>
-        <Col xs={4} md={4}><h5>Name</h5></Col>
-        <Col xs={2} md={2}><h5>Category</h5></Col>
-        <Col xs={2} md={2}><h5>Price</h5></Col>
+          <Col xs={4} md={4}><h5>Name</h5></Col>
+          <Col xs={2} md={2}><h5>Category</h5></Col>
+          <Col xs={2} md={2}><h5>Price</h5></Col>
+          <Col xs={4} md={4} />
         </Row>
         {buildUpList}
       </Grid>

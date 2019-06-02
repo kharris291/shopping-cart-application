@@ -11,7 +11,6 @@ class ShoppingCart extends Component {
   }
 
   handleRemoval(args){
-    console.log(args)
     this.props.handleRemoval(args);
   }
 

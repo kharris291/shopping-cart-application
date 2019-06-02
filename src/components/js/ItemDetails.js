@@ -25,7 +25,6 @@ class ItemDetails extends Component{
   }
 
   render(){
-    // console.log(this.props)
     return(
       [
         <Col xs={4} md={4}>
@@ -47,7 +46,6 @@ class ItemDetails extends Component{
 
 class ProductRowType extends Component{
   render(){
-    console.log(this.props.type)
     if(this.props.type ==="add"){
       return(
         [
